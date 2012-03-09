@@ -7,5 +7,8 @@ class CreateUrls < ActiveRecord::Migration
 
       t.timestamps
     end
+    
+    add_index :urls, :short
+    add_index :urls, :user_id
   end
 end
