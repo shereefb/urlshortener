@@ -1,4 +1,10 @@
 Urlshortener::Application.routes.draw do
+  get "pages/home"
+  get "pages/about_us"
+  get "pages/contact"
+  
+  
+
   devise_for :users
 
   # The priority is based upon order of creation:
@@ -58,6 +64,6 @@ Urlshortener::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
   
-  root :to => "home#index"
+  root :to => "pages#home"
   
 end
