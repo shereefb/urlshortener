@@ -1,4 +1,12 @@
 <h1>Pages#home</h1>
+
+Hell0 <%= @name %> <%= @last_name %>
 <p>Find me in app/views/pages/home.html.erb</p>
 
 <%= @date.to_s %>
+
+<%= render :partial => "/urls/form", :locals => {:url => @url} %>
+
+<%= link_to "Create a new url", new_url_path %>
+
+<%= link_to content_tag(:i, "") + "sign out", destroy_user_session_path, :method => "delete" %>

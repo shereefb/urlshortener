@@ -1,10 +1,20 @@
 Urlshortener::Application.routes.draw do
-  get "pages/home"
-  get "pages/about_us"
-  get "pages/contact"
-  
   
 
+  get "pages/home"
+  
+  match "hello/:name/:last_name" => 'pages#home'
+  match "hello/:name" => 'pages#home'
+  
+  match "hello" => 'pages#home'
+
+
+  get "pages/about_us"
+  get "pages/contact"
+  get "urls/adam"
+  
+  
+  resources :urls
   devise_for :users
 
   # The priority is based upon order of creation:
